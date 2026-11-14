@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --mainTextColor-light: #000;
+  --secondaryTextColor-light: rgb(51 51 51);
+  --mainLinkColor-light: #0da2b8;
+  --mainBorderColor-light: rgb(218, 218, 218);
+  --mainBgColor-light: rgb(249, 250, 251);
+
+  --mainTextColor-dark: #fff;
+  --secondaryTextColor-dark: #adb0b1;
+  --mainLinkColor-dark: rgb(30, 190, 214);
+  --mainBorderColor-dark: #2b3031;
+  --mainBgColor-dark: #131415;
+
+  --mainTextColor: var(--mainTextColor-dark);
+  --secondaryTextColor: var(--secondaryTextColor-dark);
+  --mainLinkColor: var(--mainLinkColor-dark);
+  --mainBorderColor: var(--mainBorderColor-dark);
+  --mainBgColor: var(--mainBgColor-dark);
+}
+
+* {
+  font-family: "Readex Pro";
+  line-height: 1.5em;
+  box-sizing: border-box;
+  color: var(--mainTextColor);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--mainBgColor);
+}
+
+p,
+span,
+li {
+  color: var(--secondaryTextColor);
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--mainLinkColor);
+  font-weight: 500;
+}
+
+li {
+  line-height: 1.9em;
+}
+
+#container--main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.section--page {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#wrapper--hero {
+  display: flex;
+  align-items: center;
+  gap: 4em;
+}
+
+#bio,
+a {
+  font-weight: 300;
+}
+
+#user-name {
+  font-size: 48px;
+  line-height: 1em;
+}
+
+#profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#email {
+  color: var(--mainTextColor);
+}
+
+#socials--list {
+  display: flex;
+  column-gap: 1em;
+  flex-wrap: wrap;
+}
+
+#social-pic {
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  width: 50px;
+}
+
+#socials--list a {
+  font-weight: 300;
+  color: var(--secondaryTextColor);
+  font-size: 0.9em;
+  transition: 0.3s;
+}
+
+#socials--list a:hover {
+  font-weight: 100;
+  color: var(--mainLinkColor);
+  font-size: 0.9em;
+}
+
+.list--marked {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--marked li {
+  position: relative;
+  padding-left: 1.75em;
+}
+
+.list--marked li::before {
+  position: absolute;
+  left: 0;
+}
+
+.list--achieve li::before {
+  content: "🚀";
+}
+
+#wrapper--techstack__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  font-size: 0.85em;
+}
+
+#wrapper--techstack__items::after {
+  content: "";
+  flex: 1000 1 auto;
+}
+
+.card--techstack {
+  flex: 1 1 auto;
+  text-align: center;
+  border: 1px solid var(--mainBorderColor);
+  border-radius: 999px;
+  padding: 0.2em 0.8em;
+  line-height: 1.4em;
+}
+
+.card--techstack span {
+  font-size: 1em;
+  line-height: 1.4em;
+  white-space: nowrap;
+}
+
+.card--project {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid var(--mainBorderColor);
+}
+
+.card--project a {
+  color: var(--mainTextColor);
+
+  transition: 0.3s;
+}
+
+.card--project a:hover {
+  color: rgb(30, 190, 214);
+}
+
+.card--work-history {
+  border-left: 1px solid var(--mainBorderColor);
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding-left: 2em;
+}
+
+.line-break {
+  background-color: var(--mainBorderColor);
+  height: 1px;
+}
+
+@media (max-width: 600px) {
+  .section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  #wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  #wrapper--hero {
+    flex-direction: column;
+  }
+
+  .card--work-history {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 0;
+  margin: 0;
+  background: #131415;
+  padding: 0px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.nav-links li {
+  list-style: none;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+.nav-links li a {
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 6px 0;
+  text-decoration: none;
+}
+.nav-links li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #fff;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.nav-links li a:hover:before {
+  width: 100%;
+}
+.nav-links li.center a:before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-links li.upward a:before {
+  width: 100%;
+  bottom: -5px;
+  opacity: 0;
+}
+.nav-links li.upward a:hover:before {
+  bottom: 0px;
+  opacity: 1;
+}
+.nav-links li.forward a:before {
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+.nav-links li.forward a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.download {
+  width: 60px;
+  height: 40px;
+  background: black;
+  float: left;
+  border-radius: 5px;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+  margin-top: 5px;
+}
+
+.download > .fa {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.df,
+.dfn {
+  position: absolute;
+}
+
+.df {
+  margin: 10px 5px 5px 5px;
+  font-size: 0.75em;
+}
+
+.dfn {
+  top: 33px;
+  font-size: 1.08em;
+}
+
+.btn--resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: 1px solid var(--mainLinkColor);
+  border-radius: 6px;
+  color: var(--mainLinkColor);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn--resume:hover {
+  background: var(--mainLinkColor);
+  color: var(--mainBgColor);
+}
+
+.btn--resume svg,
+.btn--resume svg * {
+  color: inherit;
+}
+
+/* Initials avatar, used until a profile photo is added */
+.avatar--initials {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--mainBorderColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--mainLinkColor);
+}
+
+@media (max-width: 600px) {
+  .avatar--initials {
+    width: 200px;
+    height: 200px;
+  }
+}
