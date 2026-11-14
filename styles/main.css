@@ -100,7 +100,7 @@ ul {
 }
 
 section {
-  padding: 56px 0;
+  padding: 40px 0;
 }
 
 .section-head {
@@ -481,39 +481,17 @@ section {
 
 /* ---------- Experience timeline ---------- */
 .timeline {
-  position: relative;
-  padding-left: 32px;
+  display: grid;
+  gap: 18px;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background: var(--border);
+/* Cards stay flush with the rest of the page; a coloured left edge marks the timeline */
+.job.card {
+  border-left: 4px solid var(--border);
 }
 
-.job {
-  position: relative;
-  margin-bottom: 22px;
-}
-
-.job::before {
-  content: "";
-  position: absolute;
-  left: -32px;
-  top: 26px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--surface);
-  border: 3px solid var(--accent);
-}
-
-.job--current::before {
-  background: var(--accent);
+.job.job--current {
+  border-left-color: var(--accent);
 }
 
 .job__head {
@@ -768,17 +746,18 @@ footer {
   .stat__value {
     font-size: 1.5rem;
   }
-  .timeline {
-    padding-left: 24px;
+  .card {
+    padding: 20px;
   }
-  .job::before {
-    left: -24px;
-  }
-  .timeline::before {
-    left: 3px;
+  .job__head {
+    flex-direction: column;
   }
   .job__dates {
     text-align: left;
+  }
+  .hero__cta .btn {
+    flex: 1 1 100%;
+    justify-content: center;
   }
   .topbar__actions .btn span {
     display: none;
