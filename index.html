@@ -1,246 +1,497 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Supragya Jadhav</title>
     <meta
       name="description"
-      content="Supragya Jadhav — Lead Database Administrator with 10 years running business-critical SQL Server and Azure SQL platforms."
+      content="Supragya Jadhav — Lead Database Administrator with 10+ years running business-critical SQL Server and Azure SQL platforms. Bangalore, India."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Supragya Jadhav — Lead Database Administrator" />
+    <meta
+      property="og:description"
+      content="10+ years keeping business-critical SQL Server and Azure SQL platforms fast, available and recoverable."
+    />
+    <meta property="og:type" content="profile" />
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <div id="container--main">
-      <ul class="nav-links">
-        <li class="forward"><a href="#about">About</a></li>
-        <li class="forward"><a href="#techstack">Skills</a></li>
-        <li class="forward"><a href="#work-history">Experience</a></li>
-        <li class="forward"><a href="#education">Education</a></li>
-        <li class="forward"><a href="#projects">Projects</a></li>
-        <li class="forward"><a href="#languages">Languages</a></li>
-      </ul>
+    <!-- ============ Top bar ============ -->
+    <header class="topbar">
+      <div class="container">
+        <a class="brand" href="#top">Supragya Jadhav</a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#experience">Experience</a>
+          <a href="#work">Selected Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="topbar__actions">
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" /></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+          </button>
+          <a
+            class="btn btn--primary btn--sm"
+            href="https://www.linkedin.com/in/supragya-jadhav-0b9279166/"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"
+              />
+            </svg>
+            <span>Connect</span>
+          </a>
+        </div>
+      </div>
+    </header>
 
-      <section id="wrapper--hero" class="section--page">
-        <!-- TODO: swap for <img id="profile-pic" src="assets/images/profile_pic.jpg" /> once a photo is added -->
-        <div class="avatar--initials" aria-hidden="true">SJ</div>
-
-        <div>
-          <h1 id="user-name">Supragya Jadhav</h1>
-          <p id="bio">Lead Database Administrator at Q2 · Bangalore, India</p>
-          <!-- TODO: add email if they want it public
-          <p id="email">
-            <a href="mailto:name@example.com">👉 name@example.com</a>
-          </p>
-          -->
-          <div id="socials--list">
-            <a href="https://www.linkedin.com/in/supragya-jadhav-0b9279166/" target="_blank"
-              ><img id="social-pic" src="./assets/images/linkedin.png"
-            /></a>
+    <main id="top">
+      <!-- ============ Hero ============ -->
+      <section class="hero">
+        <div class="container">
+          <!-- TODO: replace with <img class="avatar" src="./assets/images/profile_pic.jpg" alt="Supragya Jadhav" /> once a photo is added -->
+          <div class="avatar" aria-hidden="true">SJ</div>
+          <div>
+            <h1>Supragya Jadhav</h1>
+            <p class="hero__role">Lead Database Administrator at Q2</p>
+            <div class="hero__meta">
+              <span>
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+                Bangalore, India
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
+                10+ years · SQL Server &amp; Azure SQL
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" /></svg>
+                Digital banking · Banking · Insurance
+              </span>
+            </div>
+            <p class="hero__pitch">
+              I keep business-critical SQL Server and Azure SQL platforms fast, available and recoverable, and I turn
+              repetitive DBA work into reliable automation.
+            </p>
+            <div class="hero__cta">
+              <a
+                class="btn btn--primary"
+                href="https://www.linkedin.com/in/supragya-jadhav-0b9279166/"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"
+                  />
+                </svg>
+                Connect on LinkedIn
+              </a>
+              <a class="btn btn--ghost" href="#experience">View experience</a>
+              <!-- TODO: enable once a public CV is in assets/
+              <a class="btn btn--ghost" href="./assets/Supragya_Jadhav_CV.pdf" download>Download CV</a>
+              -->
+            </div>
           </div>
-          <!-- TODO: add CV download once a PDF is in assets/
-          <a class="btn--resume" href="./assets/Supragya_Jadhav_CV.pdf" download="Supragya_Jadhav_CV.pdf">Download CV</a>
-          -->
         </div>
       </section>
 
-      <section id="about" class="section--page">
-        <h2>About</h2>
-        <p>
-          SQL Server Database Administrator with 10 years running business-critical database platforms on-premises
-          and in Azure across digital banking, banking and insurance. Strong in Always On Availability Groups, HA/DR,
-          performance tuning, CDC, and backup and recovery of multi-terabyte databases. I automate DBA operations with
-          T-SQL and PowerShell and drive production incidents through root cause analysis to long-term remediation.
-        </p>
-        <h3>Key Achievements</h3>
-        <ul class="list--marked list--achieve">
-          <li>Built a metadata-driven partition maintenance framework that replaced manual partition administration.</li>
-          <li>
-            Developed PowerShell automation for SQL Server TLS certificate rotation with pre-checks, encryption
-            validation, rollback and audit evidence across clustered instances.
-          </li>
-          <li>
-            Traced THREADPOOL exhaustion on a server hosting thousands of tenant databases to 5,000+ sessions held by
-            long-running per-tenant CDC capture processes.
-          </li>
-          <li>Led a SQL Server upgrade and licence optimisation at Capgemini, significantly cutting non-production licence costs.</li>
-        </ul>
-      </section>
-
-      <section id="techstack" class="section--page">
-        <h2>Skills</h2>
-        <div id="wrapper--techstack__items">
-          <div class="card--techstack"><span>Microsoft SQL Server</span></div>
-          <div class="card--techstack"><span>Azure SQL Database</span></div>
-          <div class="card--techstack"><span>PostgreSQL</span></div>
-          <div class="card--techstack"><span>Always On Availability Groups</span></div>
-          <div class="card--techstack"><span>Windows Failover Clustering</span></div>
-          <div class="card--techstack"><span>Replication</span></div>
-          <div class="card--techstack"><span>CDC</span></div>
-          <div class="card--techstack"><span>Query Store</span></div>
-          <div class="card--techstack"><span>Table Partitioning</span></div>
-          <div class="card--techstack"><span>TDE</span></div>
-          <div class="card--techstack"><span>TLS Encryption</span></div>
-          <div class="card--techstack"><span>T-SQL</span></div>
-          <div class="card--techstack"><span>PowerShell</span></div>
-          <div class="card--techstack"><span>SQL Agent</span></div>
-          <div class="card--techstack"><span>Azure CLI</span></div>
-          <div class="card--techstack"><span>AzCopy</span></div>
-          <div class="card--techstack"><span>Ola Hallengren Maintenance</span></div>
-          <div class="card--techstack"><span>SQL Sentry</span></div>
-          <div class="card--techstack"><span>Spotlight</span></div>
-          <div class="card--techstack"><span>New Relic</span></div>
-          <div class="card--techstack"><span>Extended Events</span></div>
-          <div class="card--techstack"><span>SSMS</span></div>
-          <div class="card--techstack"><span>SSIS</span></div>
-          <div class="card--techstack"><span>SSRS</span></div>
-          <div class="card--techstack"><span>LiteSpeed</span></div>
-          <div class="card--techstack"><span>ServiceNow</span></div>
-          <div class="card--techstack"><span>Microsoft Azure</span></div>
-          <div class="card--techstack"><span>AWS</span></div>
+      <!-- ============ Stats ============ -->
+      <section class="stats" aria-label="At a glance">
+        <div class="container">
+          <div class="stats__grid">
+            <div class="stat">
+              <div class="stat__value">10+</div>
+              <div class="stat__label">Years in database administration</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">~16 TB</div>
+              <div class="stat__label">Largest databases backed up and restored</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">1000s</div>
+              <div class="stat__label">Tenant databases on a single server</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">25%</div>
+              <div class="stat__label">Performance gain from proactive tuning</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="work-history" class="section--page">
-        <h2>Work History</h2>
-
-        <div class="line-break"></div>
-        <div class="card--work-history">
-          <strong>Lead Database Administrator @ Q2</strong>
-          <p>11/2024 - Present · Bangalore, India</p>
-          <p>Database platform engineering and reliability for the Helix banking platform.</p>
-          <ul>
-            <li>
-              Own day-to-day operations of large SQL Server estates across production, staging, sandbox and performance
-              environments: Always On AGs, backups, CDC, Query Store, SQL Agent, storage and security.
-            </li>
-            <li>
-              Built a partition maintenance framework with SWITCH/MERGE/SPLIT, index-alignment checks, step-level
-              logging, resume-on-failure and email reports; fixed MERGE deadlocks and made it primary-replica aware.
-            </li>
-            <li>
-              Automated TLS certificate rotation for SQL Server, with certificate-expiry alerting and post-change
-              encryption validation.
-            </li>
-            <li>
-              Defined monitoring for asynchronous tertiary replicas using queue sizes, send/redo rates, suspend and
-              database state, catching replicas that look connected but have stopped processing log.
-            </li>
-            <li>
-              Investigated high CPU, blocking, latch and THREADPOOL waits, memory pressure and TempDB capacity issues
-              with DMVs, Query Store and SQL Sentry.
-            </li>
-            <li>
-              Tuned backups for ~16 TB databases (striping, BufferCount, MaxTransferSize, Azure storage, AzCopy),
-              handled point-in-time and TDE restores, and built audit-ready backup history reporting.
-            </li>
-            <li>
-              Reworked performance-environment refresh automation to restore secondaries WITH NORECOVERY and join the
-              AG instead of relying on automatic seeding.
-            </li>
-            <li>
-              Decommissioned a sandbox region in Azure SQL (geo-replication, elastic pools, servers) and supported
-              BACPAC migrations; validated AGs, listeners, CDC and encryption after patching failovers.
-            </li>
-          </ul>
-        </div>
-
-        <div class="line-break"></div>
-        <div class="card--work-history">
-          <strong>Consultant @ Capgemini Technology Services India Ltd.</strong>
-          <p>07/2021 - 10/2024 · Mumbai, India</p>
-          <p>SQL Server and Azure SQL administration for banking and insurance clients.</p>
-          <ul>
-            <li>Led the upgrade of SQL Server estates to the latest release, improving performance, security and functionality.</li>
-            <li>Led a licence optimisation project that cut costs on non-production servers by streamlining licence usage.</li>
-            <li>Ran DR and replication activities as part of the high-availability solution to ensure business continuity.</li>
-            <li>
-              Introduced performance monitoring with Spotlight, improving database performance by 25% through proactive
-              tuning of long-running queries, job failures and index fragmentation.
-            </li>
-            <li>Worked with cross-functional teams on the move to Azure SQL Database, reducing maintenance costs.</li>
-            <li>
-              Developed SSIS packages for daily and monthly business reports; managed logins, permissions, TDE, backups,
-              restores and monthly patching.
-            </li>
-          </ul>
-        </div>
-
-        <div class="line-break"></div>
-        <div class="card--work-history">
-          <strong>Senior Software Engineer @ L&amp;T Infotech (now LTIMindtree)</strong>
-          <p>10/2016 - 07/2021 · Mumbai, India and Johannesburg, South Africa</p>
-          <p>Database administration and development across development, QA and production.</p>
-          <ul>
-            <li>
-              Administered development, QA and production database environments: installation, configuration, backup,
-              recovery, security, upgrades, schema changes and data integrity.
-            </li>
-            <li>Designed and implemented relational data models to business requirements.</li>
-            <li>Developed stored procedures, event schedulers, database jobs and maintenance plans to automate DBA tasks.</li>
-          </ul>
+      <!-- ============ About ============ -->
+      <section id="about">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">About</span>
+            <h2>Database reliability, done properly</h2>
+          </div>
+          <div class="about__grid">
+            <div class="about__text">
+              <p>
+                I'm a SQL Server Database Administrator with over 10 years running business-critical database platforms
+                on-premises and in Azure, across digital banking, banking and insurance.
+              </p>
+              <p>
+                My strengths are Always On Availability Groups, HA/DR, performance tuning, Change Data Capture, and
+                backup and recovery of multi-terabyte databases. I automate DBA operations with T-SQL and PowerShell,
+                and I take production incidents through root cause analysis to long-term fixes.
+              </p>
+              <p>
+                At Q2 I lead database operations for the Helix platform, where my work has moved away from manual
+                operations toward monitoring, validation and automation.
+              </p>
+            </div>
+            <ul class="highlights">
+              <li>Built a metadata-driven partition maintenance framework that replaced manual partition administration.</li>
+              <li>Automated SQL Server TLS certificate rotation with pre-checks, encryption validation and rollback.</li>
+              <li>Traced a server-wide THREADPOOL exhaustion to 5,000+ sessions held by per-tenant CDC capture processes.</li>
+              <li>Led a SQL Server upgrade and a licence optimisation that cut non-production licence costs.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section id="education" class="section--page">
-        <h2>Educational Qualification</h2>
-        <div class="card--project">
-          <strong>Bachelor of Engineering</strong>
-          <p>Tatyasaheb Kore Institute of Engineering and Technology</p>
-          <p>2012 - 2016</p>
-        </div>
-      </section>
-
-      <section id="projects" class="section--page">
-        <h2>Projects</h2>
-        <div class="card--project">
-          <strong>Partition Maintenance Framework</strong>
-          <p>
-            Metadata-driven automation for daily, monthly, quarterly and yearly partitions: creates future boundaries,
-            switches out and removes expired data, validates functions, schemes and index alignment, and resumes after
-            failures.
-          </p>
-        </div>
-        <div class="card--project">
-          <strong>SQL Server TLS Certificate Automation</strong>
-          <p>
-            PowerShell rotation of SQL Server TLS certificates with pre-checks, thumbprint and ForceEncryption checks,
-            listener and encrypted-connection validation, rollback and evidence capture.
-          </p>
-        </div>
-        <div class="card--project">
-          <strong>Availability Group Tertiary Health Monitoring</strong>
-          <p>
-            Multi-signal health check that flags asynchronous replicas which appear connected but have stopped
-            processing transaction log, before it causes log growth on the primary.
-          </p>
-        </div>
-        <div class="card--project">
-          <strong>Large Database Backup Optimisation</strong>
-          <p>
-            Backup striping and parameter tuning for ~16 TB databases, with transfer testing to separate SQL Server,
-            storage and network bottlenecks.
-          </p>
-        </div>
-        <div class="card--project">
-          <strong>Database Refresh Automation</strong>
-          <p>
-            PowerShell and T-SQL refresh of production data into Availability Group performance environments, restoring
-            secondaries WITH NORECOVERY for controlled AG joins.
+      <!-- ============ Expertise ============ -->
+      <section id="expertise">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Expertise</span>
+            <h2>What I bring</h2>
+          </div>
+          <div class="expertise__grid">
+            <article class="card">
+              <div class="card__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" /><path d="M9 12l2 2 4-4" /></svg>
+              </div>
+              <h3>High Availability &amp; Disaster Recovery</h3>
+              <p>Keeping databases online through failovers and patching, and recoverable to any point in time.</p>
+              <ul class="chips">
+                <li>Always On AGs</li>
+                <li>Failover Clustering</li>
+                <li>Point-in-time restore</li>
+                <li>Replication</li>
+                <li>Geo-replication</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="card__icon">
+                <svg viewBox="0 0 24 24"><path d="M12 14l4-4" /><path d="M3.3 17a9 9 0 1 1 17.4 0" /><circle cx="12" cy="14" r="1.5" /></svg>
+              </div>
+              <h3>Performance &amp; Troubleshooting</h3>
+              <p>Diagnosing CPU, blocking, wait, memory and TempDB problems across large SQL Server estates.</p>
+              <ul class="chips">
+                <li>Query Store</li>
+                <li>DMVs</li>
+                <li>Wait statistics</li>
+                <li>SQL Sentry</li>
+                <li>Extended Events</li>
+                <li>Root cause analysis</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="card__icon">
+                <svg viewBox="0 0 24 24"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14" /></svg>
+              </div>
+              <h3>Automation &amp; Data Management</h3>
+              <p>Reusable tooling that replaces manual DBA tasks and makes failures visible.</p>
+              <ul class="chips">
+                <li>T-SQL</li>
+                <li>PowerShell</li>
+                <li>SQL Agent</li>
+                <li>Table partitioning</li>
+                <li>CDC</li>
+                <li>SSIS</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="card__icon">
+                <svg viewBox="0 0 24 24"><path d="M7 18a5 5 0 0 1-.6-9.96A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z" /></svg>
+              </div>
+              <h3>Cloud &amp; Security</h3>
+              <p>Running and migrating Azure SQL, and keeping data encrypted at rest and in transit.</p>
+              <ul class="chips">
+                <li>Azure SQL Database</li>
+                <li>Elastic pools</li>
+                <li>Azure CLI</li>
+                <li>AWS</li>
+                <li>TDE</li>
+                <li>TLS encryption</li>
+              </ul>
+            </article>
+          </div>
+          <p class="tools">
+            <strong>Also:</strong> PostgreSQL · SSMS · SSRS · Spotlight · New Relic · LiteSpeed · AzCopy · Ola Hallengren
+            maintenance · ServiceNow
           </p>
         </div>
       </section>
 
-      <section id="languages" class="section--page">
-        <h2>Languages</h2>
-        <div id="wrapper--techstack__items">
-          <div class="card--techstack"><span>English</span></div>
-          <div class="card--techstack"><span>Hindi</span></div>
-          <div class="card--techstack"><span>Marathi</span></div>
+      <!-- ============ Experience ============ -->
+      <section id="experience">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Experience</span>
+            <h2>Where I've worked</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="job job--current card">
+              <div class="job__head">
+                <div>
+                  <h3 class="job__title">Lead Database Administrator <span class="badge">Current</span></h3>
+                  <div class="job__company">Q2 · Helix platform</div>
+                </div>
+                <div class="job__dates">Nov 2024 – Present<br />Bangalore, India</div>
+              </div>
+              <p class="job__summary">
+                Database platform engineering and reliability for SQL Server estates across production, staging,
+                sandbox and performance environments.
+              </p>
+              <ul>
+                <li>
+                  Built a partition maintenance framework with SWITCH/MERGE/SPLIT, index-alignment checks, step-level
+                  logging, resume-on-failure and email reports, aware of which replica is primary.
+                </li>
+                <li>
+                  Automated SQL Server TLS certificate rotation, with certificate-expiry alerting and post-change
+                  encryption validation.
+                </li>
+                <li>
+                  Tuned backups for ~16 TB databases (striping, BufferCount, MaxTransferSize, Azure storage, AzCopy) and
+                  built audit-ready backup history reporting.
+                </li>
+              </ul>
+              <details>
+                <summary><span class="more">Show more</span><span class="less">Show less</span></summary>
+                <ul>
+                  <li>
+                    Defined monitoring for asynchronous tertiary replicas that look connected but have stopped processing
+                    transaction log.
+                  </li>
+                  <li>
+                    Investigated high CPU, blocking, latch and THREADPOOL waits, memory pressure and TempDB capacity
+                    issues with DMVs, Query Store and SQL Sentry.
+                  </li>
+                  <li>
+                    Reworked performance-environment refresh automation to restore secondaries WITH NORECOVERY and join
+                    the AG instead of relying on automatic seeding.
+                  </li>
+                  <li>
+                    Decommissioned a sandbox region in Azure SQL and supported BACPAC migrations; validated AGs,
+                    listeners, CDC and encryption after patching failovers.
+                  </li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="job card">
+              <div class="job__head">
+                <div>
+                  <h3 class="job__title">Consultant</h3>
+                  <div class="job__company">Capgemini Technology Services India Ltd.</div>
+                </div>
+                <div class="job__dates">Jul 2021 – Oct 2024<br />Mumbai, India</div>
+              </div>
+              <p class="job__summary">SQL Server and Azure SQL administration for banking and insurance clients.</p>
+              <ul>
+                <li>Led the upgrade of SQL Server estates to the latest release, improving performance, security and functionality.</li>
+                <li>Led a licence optimisation project that cut costs on non-production servers.</li>
+                <li>
+                  Introduced performance monitoring with Spotlight, improving database performance by 25% through
+                  proactive tuning.
+                </li>
+              </ul>
+              <details>
+                <summary><span class="more">Show more</span><span class="less">Show less</span></summary>
+                <ul>
+                  <li>Ran DR and replication activities as part of the high-availability solution.</li>
+                  <li>Worked with cross-functional teams on the move to Azure SQL Database, reducing maintenance costs.</li>
+                  <li>
+                    Developed SSIS packages for daily and monthly business reports; managed logins, permissions, TDE,
+                    backups, restores and monthly patching.
+                  </li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="job card">
+              <div class="job__head">
+                <div>
+                  <h3 class="job__title">Senior Software Engineer</h3>
+                  <div class="job__company">L&amp;T Infotech (now LTIMindtree)</div>
+                </div>
+                <div class="job__dates">Oct 2016 – Jul 2021<br />Mumbai, India &amp; Johannesburg, South Africa</div>
+              </div>
+              <p class="job__summary">Database administration and development across development, QA and production.</p>
+              <ul>
+                <li>
+                  Administered development, QA and production databases: installation, configuration, backup, recovery,
+                  security, upgrades and schema changes.
+                </li>
+                <li>Designed and implemented relational data models to business requirements.</li>
+                <li>Developed stored procedures, scheduled jobs and maintenance plans to automate DBA tasks.</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
-    </div>
+
+      <!-- ============ Selected work ============ -->
+      <section id="work">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Selected work</span>
+            <h2>Problems I've solved</h2>
+          </div>
+          <div class="work__grid">
+            <article class="card case">
+              <h3>Partition Maintenance Framework</h3>
+              <dl>
+                <dt>Challenge</dt>
+                <dd>Partition administration across daily, monthly, quarterly and yearly data was largely manual.</dd>
+                <dt>What I did</dt>
+                <dd>
+                  Built metadata-driven automation that creates future partitions, removes expired data, validates
+                  functions, schemes and index alignment, and resumes after failures.
+                </dd>
+                <dt>Result</dt>
+                <dd class="result">A standardised, automated process that skips secondary replicas and flags bad configuration without stopping the run.</dd>
+              </dl>
+            </article>
+            <article class="card case">
+              <h3>TLS Certificate Automation</h3>
+              <dl>
+                <dt>Challenge</dt>
+                <dd>Certificate renewals across clustered SQL Servers were error-prone and hard to verify.</dd>
+                <dt>What I did</dt>
+                <dd>
+                  Wrote PowerShell rotation with pre-checks, thumbprint and encryption validation, listener tests,
+                  rollback and evidence capture.
+                </dd>
+                <dt>Result</dt>
+                <dd class="result">Safer renewals, with expiry alerting and proof that client connections are actually encrypted.</dd>
+              </dl>
+            </article>
+            <article class="card case">
+              <h3>Backups for ~16 TB Databases</h3>
+              <dl>
+                <dt>Challenge</dt>
+                <dd>Backing up and moving very large databases took too long.</dd>
+                <dt>What I did</dt>
+                <dd>
+                  Tuned striping, BufferCount and MaxTransferSize, and tested Azure storage and AzCopy transfers to
+                  separate SQL Server, storage and network limits.
+                </dd>
+                <dt>Result</dt>
+                <dd class="result">Practical, repeatable settings for backing up and transferring multi-terabyte databases.</dd>
+              </dl>
+            </article>
+            <article class="card case">
+              <h3>Replica Health Monitoring</h3>
+              <dl>
+                <dt>Challenge</dt>
+                <dd>Asynchronous replicas could look healthy while silently falling behind, causing log growth.</dd>
+                <dt>What I did</dt>
+                <dd>
+                  Designed a multi-signal check using queue sizes, send and redo rates, suspend state and lag, not just
+                  the standard sync status.
+                </dd>
+                <dt>Result</dt>
+                <dd class="result">Stalled replicas are caught early, before they turn into production incidents.</dd>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Education & languages ============ -->
+      <section id="education">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Background</span>
+            <h2>Education &amp; languages</h2>
+          </div>
+          <div class="edu__grid">
+            <div class="card edu">
+              <h3>Bachelor of Engineering</h3>
+              <p>Tatyasaheb Kore Institute of Engineering and Technology</p>
+              <p>2012 – 2016</p>
+            </div>
+            <div class="card edu">
+              <h3>Languages</h3>
+              <ul class="lang">
+                <li>English <span>Native or bilingual</span></li>
+                <li>Hindi <span>Native or bilingual</span></li>
+                <li>Marathi <span>Full professional</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Contact ============ -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact__box">
+            <span class="eyebrow">Contact</span>
+            <h2>Let's talk</h2>
+            <p>Hiring for a database role or need help with SQL Server reliability? I'd be glad to connect.</p>
+            <div class="hero__cta">
+              <a
+                class="btn btn--primary"
+                href="https://www.linkedin.com/in/supragya-jadhav-0b9279166/"
+                target="_blank"
+                rel="noopener"
+                >Message me on LinkedIn</a
+              >
+              <!-- TODO: add email if it should be public
+              <a class="btn btn--ghost" href="mailto:name@example.com">Email me</a>
+              -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>© <span id="year">2026</span> Supragya Jadhav</footer>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        document.querySelector(".theme-toggle").addEventListener("click", function () {
+          var current =
+            root.getAttribute("data-theme") ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          var next = current === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          try {
+            localStorage.setItem("theme", next);
+          } catch (e) {}
+        });
+        document.getElementById("year").textContent = new Date().getFullYear();
+        // Expand "Show more" sections when printing
+        window.addEventListener("beforeprint", function () {
+          document.querySelectorAll("details").forEach(function (d) {
+            d.setAttribute("open", "");
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
